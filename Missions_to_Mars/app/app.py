@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 # mongo = PyMongo(app)
 
 # Create route that renders index.html template and finds documents from mongo
-@app.route("")
+@app.route("/")
 def home(): 
 
     # Find data
@@ -32,7 +32,7 @@ def home():
     return render_template("index.html", mars_info=mars_info)
 
 # Route that will trigger scrape function
-@app.route("//scrape")
+@app.route("/scrape")
 def scrape(): 
 
     # Run scrapped functions
